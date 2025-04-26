@@ -193,6 +193,22 @@ This is the plugin that shows your tags like folders.
 
 #### [Git](https://github.com/Vinzent03/obsidian-git)
 
+> A powerful community plugin for [Obsidian.md](https://github.com/Vinzent03/obsidian-git/blob/master/Obsidian.md) that brings Git integration right into your vault. Automatically commit, pull, push, and see your changes — all within Obsidian.
+
+Необходимо настроить храненение паролей в libsecret, [Authentication](https://publish.obsidian.md/git-doc/Authentication):
+
+```sh
+sudo apt install libsecret-1-0 libsecret-1-dev make gcc
+
+sudo make --directory=/usr/share/doc/git/contrib/credential/libsecret
+
+# NOTE: This changes your global config, in case you don't want that you can omit the `--global` and execute it in your existing git repository.
+git config --global credential.helper \
+   /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+
+git config set credential.helper libsecret
+```
+
 ## Публичные волты
 
 ### [Obsidian Hub](https://publish.obsidian.md/hub/00+-+Start+here)
