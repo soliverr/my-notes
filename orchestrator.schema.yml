@@ -1,0 +1,7 @@
+version: 1
+imports: []
+schemas:
+  - id: orchestrator
+    children: []
+    title: orchestrator
+    parent: root

@@ -1,0 +1,19 @@
+version: 1
+imports: []
+schemas:
+  - id: ide
+    title: ide
+    parent: root
+    children:
+      - vscode
+      - spacevim
+      - idea
+  - id: vscode
+    title: vscode
+    namespace: true
+  - id: spacevim
+    title: spacevim
+    namespace: true
+  - id: idea
+    title: idea
+    namespace: true

@@ -1,0 +1,7 @@
+version: 1
+imports: []
+schemas:
+  - id: debezium
+    title: debezium
+    parent: root
+    namespace: true

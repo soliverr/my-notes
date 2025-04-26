@@ -1,0 +1,7 @@
+version: 1
+imports: []
+schemas:
+  - id: latex
+    children: []
+    title: latex
+    parent: root

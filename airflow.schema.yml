@@ -1,0 +1,7 @@
+version: 1
+imports: []
+schemas:
+  - id: airflow
+    title: airflow
+    parent: orchestrator
+    namespace: true

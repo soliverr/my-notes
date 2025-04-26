@@ -1,0 +1,7 @@
+version: 1
+imports: []
+schemas:
+  - id: kubernetes
+    title: kubernetes
+    parent: root
+    namespace: true
