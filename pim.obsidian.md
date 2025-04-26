@@ -167,6 +167,13 @@ Transfer messages and files from [Telegram](https://telegram.org/) to your [O
 * Ctrl Shft O - Obsidian clipper
 * Ctrl Sft H - Highlight clipper
 
+#### Интеграция Jupyter ноутбуков
+
+* <https://github.com/MaelImhof/obsidian-jupyter>
+* <https://github.com/tillahoffmann/obsidian-jupyter>
+##### [Jupyter for Obsidian](https://jupyter.mael.im/)
+
+🗒️Надо бы попробовать этот плагин
 ### Тэги
 #### [Tag Wrangler](https://github.com/pjeby/tag-wrangler)
 
@@ -195,7 +202,7 @@ This is the plugin that shows your tags like folders.
 
 > A powerful community plugin for [Obsidian.md](https://github.com/Vinzent03/obsidian-git/blob/master/Obsidian.md) that brings Git integration right into your vault. Automatically commit, pull, push, and see your changes — all within Obsidian.
 
-Необходимо настроить храненение паролей в libsecret, [Authentication](https://publish.obsidian.md/git-doc/Authentication):
+Необходимо настроить хранение паролей в libsecret, [Authentication](https://publish.obsidian.md/git-doc/Authentication):
 
 ```sh
 sudo apt install libsecret-1-0 libsecret-1-dev make gcc
@@ -208,6 +215,8 @@ git config --global credential.helper \
 
 git config set credential.helper libsecret
 ```
+
+Для работы с GitHub удобней использовать ключи SSH.
 
 ## Публичные волты
 
