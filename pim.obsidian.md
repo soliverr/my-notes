@@ -116,6 +116,7 @@ You **need** to have Dataview installed to use this plugin.
 ##### [Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)
 
 * [Smart Connections Documentation](https://docs.smartconnections.app)
+* [Adding AI to your Obsidian Notes with SmartConnections and CoPilot](https://effortlessacademic.com/adding-ai-to-your-obsidian-notes-with-smartconnections-and-copilot/)
 
 После установки:
 ![[Pasted image 20250409182119.png]]

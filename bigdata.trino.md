@@ -133,6 +133,67 @@ WITH (
 insert into lakehouse.web.page_views values (CURRENT_DATE, 1, 'http://test', CURRENT_DATE, 'NZ');
 ```
 
+### DeltaLake
+
+Проблемы с обновлением на версию 457 в режиме `fs.native-s3.enabled=true`
+
+```
+# File: deltalake.properties
+
+connector.name=delta_lake
+
+hive.metastore.uri=thrift://hive-metastore:9083
+
+fs.native-s3.enabled=true
+s3.endpoint=s3.eu-central-1.amazonaws.com
+s3.path-style-access=true
+s3.aws-access-key=<>
+s3.aws-secret-key=<>
+
+delta.hive-catalog-name=lakehouse
+delta.enable-non-concurrent-writes=false
+delta.vacuum.min-retention=1h
+delta.register-table-procedure.enabled=true
+delta.extended-statistics.collect-on-write=false
+
+```
+
+Возникает ошибка:
+
+```
+2025-04-30T11:22:10.571+0200	WARN	main	com.google.inject.internal.util.LineNumbers	Failed loading line numbers. ASM is probably out of date. Further failures won't be logged.
+java.lang.IllegalArgumentException: Unsupported class file major version 66
+	at com.google.inject.internal.asm.$ClassReader.<init>(ClassReader.java:199)
+	at com.google.inject.internal.asm.$ClassReader.<init>(ClassReader.java:180)
+	at com.google.inject.internal.asm.$ClassReader.<init>(ClassReader.java:166)
+	at com.google.inject.internal.asm.$ClassReader.<init>(ClassReader.java:287)
+	at com.google.inject.internal.util.LineNumbers.<init>(LineNumbers.java:74)
+...
+2025-04-30T11:22:10.766+0200	ERROR	main	io.trino.server.Server	Unable to create injector, see the following errors:
+
+1) [Guice/ErrorInjectingConstructor]: NullPointerException: The URI scheme of endpointOverride must not be null.
+  at S3FileSystemFactory.<init>(Unknown Source)
+  while locating S3FileSystemFactory
+  at java.base/DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+      \_ installed by: FileSystemModule -> S3FileSystemModule
+  while locating TrinoFileSystemFactory annotated with interface FileSystemS3
+  while locating TrinoFileSystemFactory annotated with @Element(setName=,uniqueId=64, type=MAPBINDER, keyType=String)
+  at FileSystemModule.createFileSystemFactory(Unknown Source)
+      \_ for 2nd parameter factories
+  at FileSystemModule.createFileSystemFactory(Unknown Source)
+  at ThriftHiveMetastoreFactory.<init>(Unknown Source)
+      \_ for 4th parameter fileSystemFactory
+  while locating ThriftHiveMetastoreFactory
+  at java.base/DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+      \_ installed by: DeltaLakeMetastoreModule -> ConditionalModule -> DeltaLakeThriftMetastoreModule -> ThriftMetastoreModule
+  while locating ThriftMetastoreFactory
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_CONSTRUCTOR
+Caused by: NullPointerException: The URI scheme of endpointOverride must not be null.
+
+
+```
 ### MongoDB
 
 * [MongoDB](https://trino.io/docs/current/connector/mongodb.html)
