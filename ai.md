@@ -21,6 +21,7 @@
 * https://github.com/SakanaAI/AI-Scientist-v2
 * https://arxiv.org/abs/2504.00472
 * https://notebooklm.google.com
+* https://paperswithcode.com/paper/representation-learning-for-person-or-entity
 
 ## Large Language Models
 
