@@ -188,3 +188,60 @@ Here are the overview instructions:
       "filterType": "BLOCK_LIST",
       "regxPatternStrList": [".*_delta_log.*"]
     }
+
+## Problem with Trino version above 455
+
+I've done some experiments with Alluxio locally using my laptop on x64 processors.
+
+What I have now:
+
+1. If I use `fs.native-s3.enabled=true`, Trino fails with the error while loading Delta Connector for both 455 and 457 versions
+    
+
+`​java.lang.IllegalArgumentException: Unsupported class file major version 66`
+
+Don't know why, because I use Java version 22 as been said in official documentation.
+
+2. Starting from version 457 Trino can't update Delta-tables.
+    
+
+It is not the case of HdfsOutputfile.java (
+
+because version 455 has the same piece of code (
+
+I think issue is deeper inside DeltaLake connector.
+
+For version 455 we have the following list of files:
+
+While for version 457 classes are changed:
+
+As you can see there is new class S3ConditionalWriteLogSynchronizer.java intead of S3NativeTransactionLogSynchronizer.java.
+
+And 457 source has this line
+
+So, it looks like we should use new S3 API activated by `fs.native-s3.enabled=true` and `fs.hadoop.enabled=false`
+
+But, here are two problems:
+
+1. see point 1 above about Trino fails with `fs.native-s3.enabled=true` (I believe, it is a Trino issue)
+    
+2. is Alluxio Edge absolutely requires `fs.hadoop.enabled=true` option and doesn't support new Trino's S3 API?
+
+
+Hi again, Hithen
+
+I've solve the issue with `fs.native-s3.enabled=true` parameter.
+
+When new S3 API activated it requires to specify s3.endpoint and s3.region in special way.
+
+For Trino 457 my deltalake.properties file now looks like this:
+
+`# File: deltalake.properties` `connector.name=delta_lake` `hive.metastore.uri=thrift://hive-metastore:9083` `fs.native-s3.enabled=true` `s3.endpoint=<https://s3.eu-central-1.amazonaws.com>` `s3.region=eu-central-1` `s3.path-style-access=true` `s3.aws-access-key=<>` `s3.aws-secret-key=<>` `delta.hive-catalog-name=lakehouse` `delta.enable-non-concurrent-writes=true` `delta.vacuum.min-retention=1h` `delta.register-table-procedure.enabled=true`
+
+`delta.extended-statistics.collect-on-write=false`
+
+After that all DML operation: CREATE/UPDATE/DELETE works fine.
+
+So the problem located in old S3 API activated by `fs.hadoop.enabled=true`.
+
+If this mode is strongly required by Alluxio Edge we can't to upgrade Trino any version above 455.
