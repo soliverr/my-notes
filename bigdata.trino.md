@@ -236,6 +236,18 @@ if __name__ == "__main__":
 
 ```
 
+```
+❗ Found Java 66 class in:
+   JAR: ./io.airlift_aircompressor-v3-3.0.jar
+   Class: io/airlift/compress/v3/Compressor.class
+   Major version: 66
+
+❗ Found Java 66 class in:
+   JAR: ./io.trino_trino-array-457.jar
+   Class: io/trino/array/BigArrays.class
+   Major version: 66
+
+```
 ### MongoDB
 
 * [MongoDB](https://trino.io/docs/current/connector/mongodb.html)
