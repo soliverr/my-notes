@@ -191,9 +191,51 @@ java.lang.IllegalArgumentException: Unsupported class file major version 66
 Learn more:
   https://github.com/google/guice/wiki/ERROR_INJECTING_CONSTRUCTOR
 Caused by: NullPointerException: The URI scheme of endpointOverride must not be null.
+```
 
+Решение
+
+Сканер версии классов:
+
+```python
+import zipfile
+import os
+
+def get_class_major_version(jar_path, class_name):
+    with zipfile.ZipFile(jar_path, 'r') as jar:
+        with jar.open(class_name) as f:
+            data = f.read(8)
+            if len(data) < 8:
+                return None
+            # Bytes 6-7: major version
+            return int.from_bytes(data[6:8], byteorder='big')
+
+def scan_jars(base_dir, target_major=66):
+    for root, _, files in os.walk(base_dir):
+        for file in files:
+            if file.endswith(".jar"):
+                jar_path = os.path.join(root, file)
+                try:
+                    with zipfile.ZipFile(jar_path, 'r') as jar:
+                        for name in jar.namelist():
+                            if name.endswith(".class"):
+                                version = get_class_major_version(jar_path, name)
+                                #print(f"{jar_path}: {name}: {version}")
+                                if version == target_major:
+                                    print(f"❗ Found Java {target_major} class in:")
+                                    print(f"   JAR: {jar_path}")
+                                    print(f"   Class: {name}")
+                                    print(f"   Major version: {version}\n")
+                                    break  # Stop after first match per JAR
+                except zipfile.BadZipFile:
+                    print(f"⚠️ Skipping invalid JAR: {jar_path}")
+
+if __name__ == "__main__":
+    # Укажи путь к директории, где находится Trino (например, "./trino-server-457")
+    scan_jars(base_dir=".")
 
 ```
+
 ### MongoDB
 
 * [MongoDB](https://trino.io/docs/current/connector/mongodb.html)
