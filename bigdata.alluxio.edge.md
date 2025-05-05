@@ -4,6 +4,9 @@ title: Alluxio Edge
 desc: Proprietary caching solution for Trino/Presto from Alluxio
 updated: 1706641794691
 created: 1703082739898
+tags:
+  - trino
+  - alluxio/edge
 ---
 # [Alluxio Edge](https://documentation.alluxio.io/ee-edge)
 

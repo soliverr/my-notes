@@ -337,13 +337,13 @@ Warnings: [InconsistentProperty{key=alluxio.worker.data.server.domain.socket.as.
 
 Решение от Alluxio для кеширования файлов при чтении для Trino/Presto.
 
-С версии Trino 458 обнаружилась проблема, которую Alluxio пока пофиксить не могут.
+С версии Trino 458 обнаружилась проблема, которую Alluxio пока пофиксить не могут. Оказалось, что уже [[bigdata.alluxio.edge#Problem with Trino versions above 455|в версии 457]] проявилась эта проблема 
 
 >Between 455 and 465, there is a big breaking change regarding how Trino supports legacy file system: [https://trino.io/docs/current/release/release-458.html](https://trino.io/docs/current/release/release-458.html) 
 > 
   This is the cause of requiring `fs.hadoop.enabled=true` for versions 458+.  
   However it’s likely more than a simple code migration with a boolean to toggle the old codepath and is likely the reason why the same database operation is hitting a different codepath on the filesystem level within Trino’s code.
 
-Вот [пердупреждение](https://trino.io/docs/current/release/release-458.html#delta-lake-connector) об изменениях в коннекторе DeltaLake:
+Вот [предупреждение](https://trino.io/docs/current/release/release-458.html#delta-lake-connector) об изменениях в коннекторе DeltaLake:
 
 >[⚠️ Breaking change:](https://trino.io/docs/current/release.html#breaking-changes "Breaking change") Deactivate [legacy file system support](https://trino.io/docs/current/object-storage.html#file-system-legacy) for all catalogs. You must activate the desired [file system support](https://trino.io/docs/current/object-storage.html#file-system-configuration) with `fs.native-azure.enabled`,`fs.native-gcs.enabled`, `fs.native-s3.enabled`, or `fs.hadoop.enabled` in each catalog. Use the migration guides for [Azure Storage](https://trino.io/docs/current/object-storage/file-system-azure.html#fs-legacy-azure-migration), [Google Cloud Storage](https://trino.io/docs/current/object-storage/file-system-gcs.html#fs-legacy-gcs-migration), and [S3](https://trino.io/docs/current/object-storage/file-system-s3.html#fs-legacy-s3-migration) to assist if you have not switched from legacy support. ([#23343](https://github.com/trinodb/trino/issues/23343))
