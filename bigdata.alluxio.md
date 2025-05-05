@@ -1,18 +1,20 @@
 ---
 id: eonv4cpysit1zj996ggsp2y
 title: Alluxio
-desc: ''
+desc: "Alluxio: Data Orchestration solution for many DFS"
 updated: 1686220750816
 created: 1675437479119
+tags:
+  - data-management
+  - alluxio
+  - data-orchestration
 ---
-Alluxio
-=======
+# [Alluxio](https://www.alluxio.io)
 
-[Alluxio](https://www.alluxio.io)
 
-# Ресурсы
+# References
 
-* [Alluxio Data Orchestration Summin 2020](https://www.alluxio.io/data-orchestration-summit-2020/#presentations)
+* [Alluxio Data Orchestration Summit 2020](https://www.alluxio.io/data-orchestration-summit-2020/#presentations)
 * [Building High-Performance Data Lake Using Apache Hudi and Alluxio at T3Go](https://www.alluxio.io/blog/building-high-performance-data-lake-using-apache-hudi-and-alluxio-at-t3go/)
 
 # Download
@@ -333,7 +335,7 @@ com.google.common.util.concurrent.ExecutionError: java.lang.NoClassDefFoundError
 Warnings: [InconsistentProperty{key=alluxio.worker.data.server.domain.socket.as.uuid, values=false (10.20.72.200:19998), true (10.20.71.6:29999, 10.20.78.52:29999, 10.20.69.36:29999)}]
 ```
 
-# Alluxio Edge
+# [[bigdata.alluxio.edge|Alluxio Edge]]
 
 Решение от Alluxio для кеширования файлов при чтении для Trino/Presto.
 
