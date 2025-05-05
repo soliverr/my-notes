@@ -512,3 +512,5 @@ meMs":"0","numTargetRowsInserted":"43502","scanTimeMs":"22108","numTargetRowsUpd
 > Currently, delta supports idempotent write using Dataframe writer options. These writer options are applicable to inserts only. This PR adds support for idempotency using SQL options(DELTA_IDEMPOTENT_DML_TXN_APP_ID and DELTA_IDEMPOTENT_DML_TXN_VERSION) to INSERTS/DELETE/UPDATE/MERGE etc. When both writer options and SQL conf are specified, we will use the writer option values.
 > 
 > Idempotent write works by checking the txnVersion and txnAppId from user-provided write options or from session configurations(as a SQL conf). If the same or higher txnVersion has been recorded, then it will skip the write.
+
+Эти метаданные видны в json-файлах в _delta_log

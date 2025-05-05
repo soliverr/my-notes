@@ -1,9 +1,12 @@
 ---
 id: zr2q6xdf3950vpzaikvpr3l
-title: Packagemanager
-desc: ''
+title: Package Management
+desc: ""
 updated: 1655272486711
 created: 1651128945725
+tags:
+  - package-management
+  - software-distribution
 ---
 
 # RPM
