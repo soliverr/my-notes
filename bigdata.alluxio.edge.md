@@ -297,3 +297,12 @@ For version 455 we have the following [list of files](https://github.com/trinodb
 And 457 source has [this line](https://github.com/trinodb/trino/blob/457/plugin/trino-delta-lake/src/main/java/io/trino/plugin/deltalake/transactionlog/writer/S3ConditionalWriteLogSynchronizer.java#L44](https://github.com/trinodb/trino/blob/457/plugin/trino-delta-lake/src/main/java/io/trino/plugin/deltalake/transactionlog/writer/S3ConditionalWriteLogSynchronizer.java#L44). So, it looks like we **should use new S3 API** activated by `fs.native-s3.enabled=true` and `fs.hadoop.enabled=false`
 
 🚨Seems we stuck to the 455 version of Trino while using the current Alluxio Edge solution for caching.
+
+I've got a confirmation from the Alluxio team at 2025-05-07:
+
+> I checked with my Engineering team — Alluxio Edge is compatible **ONLY** with the Hadoop FileSystem API (`fs.hadoop.enabled=true`)
+> 
+> *In other words, Trino with Alluxio Edge can access S3 using only the Hadoop FileSystem API*
+> 
+> Alluxio Edge **is not compatible** with the S3 FileSystem API (`fs.native-s3.enabled=true`), and my Engineering and PM teams tell me there **are currently no plans to support native Trino S3 access**.
+
