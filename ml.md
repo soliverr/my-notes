@@ -20,3 +20,7 @@ Kubeflow - The Machine Learning Toolkit for Kubernetes
 # [ClearML](https://clear.ml/)
 
 ClearML - The Infrastructure Platform For AI Builders
+
+# [Seldon](https://www.seldon.io/)
+
+Seldon - Take Control of Complexity. Real-time machine learning deployment with enhanced observability for any AI application or system, managed your way
