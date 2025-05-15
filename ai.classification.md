@@ -75,10 +75,11 @@ mindmap-plugin: basic
 									- Summarization Models
 									- MarianMT
 								- Mixture of Experts (MoE)
-								- Multilingual Models
+								- Multilingual Models ^d73e1e1f-fa61-fcd6
 									- mBERT
 									- XLM-R
 									- mT5
+								- RAG (Retrieval-Augmented Generation)
 							- Vision Centric (Vision Transformers - ViTs) ^768c361f-bd66-bd69
 								- Image Classification
 								- Object Detection
