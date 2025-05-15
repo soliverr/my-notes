@@ -42,10 +42,107 @@ mindmap-plugin: basic
 						- LSTM
 						- GRU
 					- Transformers
+						- by Core Task
+							- Natural Language Processing (NLP) Centric
+								- Decoder-only Transformers
+									- GPT Family
+										- GPT-2
+										- GPT-3
+										- GPT-4
+										- GPT-Neo/GPT-J
+									- LLaMA Family
+									- Others
+										- OPT
+										- Bloom
+										- Mistral
+								- Encoder-only Transformers
+									- BERT Family
+										- BERT
+										- RoBERTa
+										- ALBERT
+										- DistilBERT
+									- Masked Language Modeling Focused
+									- Feature Extraction Focused
+								- Encoder-Decoder
+								(a.k.a. Sequence-to-Sequence)
+									- T5 Family
+										- mT5 (Multilingual T5)
+										- T5
+									- BART Family
+										- mBART
+										- BART
+									- Translation Models
+									- Summarization Models
+									- MarianMT
+								- Mixture of Experts (MoE)
+								- Multilingual Models
+									- mBERT
+									- XLM-R
+									- mT5
+							- Vision Centric (Vision Transformers - ViTs) ^768c361f-bd66-bd69
+								- Image Classification
+								- Object Detection
+								- Semantic Segmentation
+								- Video Understanding
+							- Multimodal
+								- Text & Image
+									- CLIP
+									- DALL-E
+									- Flamingo
+								- Text & Audio
+								- Text, Image & Video
+									- Gato
+							- Graph Transformers
+							- Reinforcement Learning Transformers
+							- Scientific Applications (e.g., Protein Folding)
+						- by Scale and Training Strategy
+							- Small-scale Transformers
+							- Large Language Models (LLMs) - Parameter Scale (>1 Billion)
+							- Foundation Models (Trained on broad data, adaptable)
+							- Pre-training Objectives
+								- Masked Language Modeling (MLM)
+								- Causal Language Modeling (CLM)
+								- Next Sentence Prediction (NSP) (less common now)
+								- Span Corruption
+								- Prefix Language Modeling
+							- Fine-tuning Strategies
+								- Task-specific fine-tuning
+								- Instruction tuning
+								- Prompt tuning
+								- Parameter-efficient fine-tuning (PEFT)
+						- by Openness and Availability ^9c40ad0a-c6c6-73a1
+							- Proprietary Models (e.g., OpenAI models, Google models)
+							- Open-Source Models (e.g., Llama, Mistral, OPT)
+							- Research Models (often publicly shared for academic purposes)
+						- by Architectural Variations
+							- Attention Mechanism Modifications
+								- Long-Range Attention Mechanisms (e.g., Reformer, Longformer)
+								- Multi-Head Attention Variants
+								- Sparse Attention
+								- Efficient Attention Mechanisms
+							- Positional Encoding Variations
+								- Absolute Positional Embeddings
+								- Relative Positional Embeddings (e.g., T5, RoBERTa)
+								- Rotary Positional Embeddings (RoPE)
+							- Normalization Layer Placement
+								- Pre-Normalization
+								- Post-Normalization
+								- Sandwich Normalization
+							- Activation Function Variations
+								- ReLU and its variants (GeLU, Swish)
+								- Other non-linearities
+							- Layer Normalization vs. Batch Normalization
+							- Residual Connections and their variations
+						- ?Long-Context Transformers?
+							- Longformer, BigBird, Claude 2, GPT-4 Turbo – optimized for long documents.
+						- ?Efficient Transformers?
+							- Linformer, Performer, Reformer – reduce memory/computational cost.
+						- ?Instruction-Tuned / Chat Models?
+							- ChatGPT, Claude, Gemini, Mistral-Instruct – optimized for dialogue.
 					- Autoencoders
 					- GAN
 					- Graph (GNN)
-				- by Information Flow
+				- by Information Flow ^61fda1b6-f98d-4c28
 					- Feedforward
 					- Recurrent
 				- by Training
@@ -74,10 +171,10 @@ mindmap-plugin: basic
 							- SARSA
 							- DDPG
 					- Transfer Learning
-				- by Depth
+				- by Depth ^0432b037-8213-d353
 					- Shallow
 					- Deep
-				- by Application
+				- by Application ^55989a82-a1f3-2ff1
 					- Computer Vision
 					- Natural Language Processing (NLP)
 					- Speech Recognition
@@ -88,7 +185,7 @@ mindmap-plugin: basic
 				- Deep Gaussian processes
 				- Deep Kernel machines
 				- Hierachical mixture models
-	- Classical Machine Learning
+	- Classical Machine Learning ^689979da-f1a3-2b90
 		- Regression
 			- Linear
 			- Polynomial
