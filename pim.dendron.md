@@ -11,10 +11,9 @@ tags:
   - wiki-system
   - markdown-integration
 ---
-
 ## Общие сведения
 
-[Dendron](https://wiki.dendron.so/) - программа для организации заметок в виде иерархии. Denron - это локальная wiki-система, облегчающая ведение заметок в формате Markdown и организующая заметки в виде иерархий, что позволяет использовать накопленную информацию как небольшую локальную систему управления знаниями.
+[Dendron](https://wiki.dendron.so/) - программа для организации заметок в виде иерархии. Dendron - это локальная wiki-система, облегчающая ведение заметок в формате Markdown и организующая заметки в виде иерархий, что позволяет использовать накопленную информацию как небольшую локальную систему управления знаниями.
 
 В основу организации знаний в Dendron положена плоская иерархическая модель организации файлов. Более подробно об этом подходе написано в статье [A Hierarchy First Approach to Note Taking](https://www.kevinslin.com/notes/3dd58f62-fee5-4f93-b9f1-b0f0f59a9b64.html).
 
@@ -22,10 +21,11 @@ tags:
 
 [Awesome Dendron](https://github.com/dendronhq/awesome-dendron/)
 
-**Dendron больше не жив, с 13 февраля 2024:**
+> [!attention] **Dendron больше не жив, с 13 февраля 2024:**
+>
+> * https://github.com/dendronhq/dendron/pull/3979/commits/fe6263b80f2e80eb900766c12692489dfcd19443
+> *  https://www.reddit.com/r/dendron/comments/10z19pz/so_on_tuesday_the_developer_of_dendron_announced/
 
-* https://github.com/dendronhq/dendron/pull/3979/commits/fe6263b80f2e80eb900766c12692489dfcd19443
-* https://www.reddit.com/r/dendron/comments/10z19pz/so_on_tuesday_the_developer_of_dendron_announced/
 ## Установка Dendron
 
 Официальная инструкция по установке доступна на странице [Getting Started](https://wiki.dendron.so/notes/678c77d9-ef2c-4537-97b5-64556d6337f1.html) проекта.

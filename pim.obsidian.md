@@ -28,6 +28,7 @@ author: Sergei Kryazvevskikh <soliverr@gmail.com>
 * [Advanced formatting syntax](https://help.obsidian.md/advanced-syntax)
 * [Obsidian Flavored Markdown](https://help.obsidian.md/obsidian-flavored-markdown)
 * [Internal links](https://help.obsidian.md/links)
+* [Callouts](https://help.obsidian.md/callouts)
 
 ### [Шаблоны](https://help.obsidian.md/plugins/templates)
 
@@ -73,37 +74,34 @@ created: <create timestamp in seconds>
 Создал пользовательскую функцию `uuid()` в настройках Templater:
 ![[Pasted image 20250516170001.png|800]]
 
-📝 `uuidgen` - это утилита,  которая должна быть доступна в системе.
+> [!note] `uuidgen` - это утилита,  которая должна быть доступна в системе.
 
 Создал два шаблона:
 
-**`dendron-frontmatter-template`** - можно использовать для добавления свойств в текущие заметки назначить шаблоном по умолчанию при создании страницы:
+**`dendron-frontmatter-template`** - можно использовать для добавления свойств в текущие заметки
 
 ```markdown
 ---
-id: 25a06d0c-bd44-46bb-87a2-43577baa771d
-title: pim obsidian
+id: <% tp.user.uuid() %>
+title: <% tp.file.title.replaceAll('.', ' ') %>
 desc: ''
-created: 1745676368
-updated: 1747408526
+created: <% tp.file.creation_date("X") %>
+updated: <% tp.file.last_modified_date("X") %>
 author: Sergei Kryazvevskikh <soliverr@gmail.com>
-tags: pim,obsidian
+tags: <%tp.file.tags %> <% tp.file.title.replaceAll('.', ',') %>
 ---
-
-# pim obsidian
 ```
 
 **`dendron-frontmatter-template-create-page`** - можно назначить шаблоном по умолчанию при создании страницы:
 
-```
+```markdown
  <% tp.file.include("[[dendron-frontmatter-template]]") %>
  # <% tp.file.title.replaceAll('.', ' ') %>
 ```
 
 Я использую плоские наименования файлов Dendron, поэтому части имени файла можно сразу добавлять в теги.
 
-TODO:
-
+TODO: #todo
 * [ ] получать имя пользователя и почту из конфигурации Git
 * [ ] разобраться с пользовательскими макросами и формировать uuid через JavaScript
 * [ ] поискать как работать с Git в JavaScript
@@ -112,13 +110,29 @@ TODO:
 
 Можно вручную добавлять свойства из шаблона через команду 'Template: Insert Template'. 
 
-❗Нужно пользоваться с осторожностью, похоже не все функции Templater срабатывают, особенно теги может перезаписать, а не добавить
+❗*Нужно пользоваться с осторожностью, похоже не все функции Templater срабатывают, особенно теги может перезаписать, а не добавить*
 
 Как-то сложно получается:
-* Templates: Insert template -> выбор файла шалона
+* Templates: Insert template -> выбор файла шаблона
 * Templater: Replace Templates in the active file
 
 Ломает тэги, не работает пользовательская функция `uuid`.
+
+#### [AI for Templater](https://github.com/TfTHacker/obsidian-ai-templater)
+
+* [Introduction to AI for Templater](https://tfthacker.com/AIT)
+
+> This plugin extends Templater to interact with large language models. It is primarily designed to work with OpenAI LLMs, like the ones used by ChatGPT, but is also compatible with any LLM that supports the OpenAI API.
+
+Примеры использования новых макросов вот[здесь](https://tfthacker.com/AIT-Examples). Макрос можно вставить в любое время и место, и выполнить команду `Templater: Replace Templates in the active file (ALT+R)`
+
+Пока из интересного:
+* создание тегов, то же самое делает [[#[AI Tagger Universe](https //github.com/niehu2018/obsidian-ai-tagger-universe)|AI Tagger Universe]], но тут можно самому формировать Prompt, и включать туда существующие теги в документе
+* создание резюме заметки
+
+TODO: #todo
+* [ ] Сформировать PROMPT для добавления тегов
+
 
 ### Вложения
 
@@ -199,16 +213,18 @@ You **need** to have Dataview installed to use this plugin.
 | OpenAI        | [API key](https://platform.openai.com/api-keys)        | [Models](https://platform.openai.com/docs/models)                                    |
 | OpenRouter    | [API key](https://openrouter.ai/settings/keys)         | [Models](https://openrouter.ai/models)                                               |
 | Perplexity    | [API key](https://www.perplexity.ai/settings/api)      | [Models](https://docs.perplexity.ai/guides/model-cards)                              |
+##### [LLM Plugin](https://github.com/eharris128/Obsidian-LLM-Plugin)
+##### [AI integration Hub Plugin](https://github.com/hish-math/obsidian-ai-hub)
 
-##### [Hints Flow](https://github.com/slpbx/obsidian-plugin)
+#### [Hints Flow](https://github.com/slpbx/obsidian-plugin)
 
-##### [Fabric](https://github.com/danielmiessler/fabric)
+#### [Fabric](https://github.com/danielmiessler/fabric)
 
 ###### [Unofficial Fabric](https://github.com/chasebank87/unofficial-fabric-plugin)
 
 ###### [Mesh AI](https://github.com/chasebank87/mesh-ai)
 
-##### [Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)
+#### [Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)
 
 * [Smart Connections Documentation](https://docs.smartconnections.app)
 * [Adding AI to your Obsidian Notes with SmartConnections and CoPilot](https://effortlessacademic.com/adding-ai-to-your-obsidian-notes-with-smartconnections-and-copilot/)
@@ -216,7 +232,18 @@ You **need** to have Dataview installed to use this plugin.
 После установки:
 ![[Pasted image 20250409182119.png]]
 
-Уже есть Smart Connection Visualizer, Smart Templates
+Уже есть Smart Connection Visualizer #todo ссылку на этот плагин
+
+#### Gemini
+
+Доступно несколько плагинов для работы с Gemini. Нужно выбрать чем удобней пользоваться.
+
+##### [YouTube Video Summarizer for Obsidian](https://github.com/mbramani/obsidian-yt-video-summarizer)
+##### [Obsidian Gemini-Generator](https://github.com/BjarneRentz/obsidian-gemini-generator)
+##### [Gemini Scribe for Obsidian](https://github.com/allenhutchison/obsidian-gemini)
+##### [Gemini AI Assistant](https://github.com/Artel250/Obsidian-Gemini-Assistant)
+##### [Your Gemini AI Powered Assistant](https://github.com/eatgrass/obsidian-gemini-assistant)
+
 #### Интеграция с Телеграмм
 
 ##### [Hints Flow](https://github.com/slpbx/obsidian-plugin)
@@ -314,6 +341,9 @@ git config set credential.helper libsecret
 ```
 
 Для работы с GitHub удобней использовать ключи SSH.
+
+#### [GitHub Gitless Sync](https://github.com/silvanocerza/github-gitless-sync)
+#### [GitHub Stars Plugin](https://github.com/flyingnobita/obsidian-github-stars)
 
 ### Шаблоны для ведения заметок
 
