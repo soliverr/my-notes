@@ -31,7 +31,7 @@ mindmap-plugin: basic
 - Self-Aware AI
 
 ## Based on Learning Approach
-- Machine Learning
+- Machine Learning ^544f75e9-b789-a18f
 	- Deep Learning
 		- By Deep Architecture
 			- Neural Networks
@@ -182,11 +182,11 @@ mindmap-plugin: basic
 					- Time Series Analysis
 					- Recommender Systems
 					- Medical Diagnostics
-			- Non-Neural Deep Models ^cd96f906-3dbc-b26a
+			- Non-Neural Deep Models
 				- Deep Gaussian processes
 				- Deep Kernel machines
 				- Hierachical mixture models
-	- Classical Machine Learning
+	- Classical Machine Learning ^16e74507-1cb4-aac3
 		- Regression
 			- Linear
 			- Polynomial
@@ -222,7 +222,7 @@ mindmap-plugin: basic
 		- Мультимодальные эмбеддинги
 			- Пример: модель CLIP (от OpenAI) получает эмбеддинги изображения и текста в одном пространстве, чтобы можно было сравнивать их напрямую.
 	- Tokenization
-- Other Approaches ^0d20b241-467d-1e05
+- Other Approaches
 	- Symbolic AI ^695be396-67d0-256b
 		- Expert Systems
 		- Logic Programming

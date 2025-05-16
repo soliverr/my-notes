@@ -4,6 +4,7 @@ tags:
   - note-taking
   - productivity
   - markdown
+related: "[[pim]]"
 ---
 
 [Obsidian](https://obsidian.md/)- Sharpen your thinking. The free and flexible app for your private thoughts.
@@ -121,6 +122,7 @@ You **need** to have Dataview installed to use this plugin.
 После установки:
 ![[Pasted image 20250409182119.png]]
 
+Уже есть Smart Connection Visualizer, Smart Templates
 #### Интеграция с Телеграмм
 
 ##### [Hints Flow](https://github.com/slpbx/obsidian-plugin)
