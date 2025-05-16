@@ -26,6 +26,70 @@ related: "[[pim]]"
 
 * [Ultimate Guide to Obsidian Templates (with Examples)](https://facedragons.com/productivity/obsidian-templates-with-examples/)
 
+В стандартных плагинах нужно задать каталог для хранения шаблонов:
+
+![[Pasted image 20250516120701.png|800]]
+
+Стандартный механизм шаблонов имеет ограниченный функционал и маленькое число переменных. Рекомендуется использовать плагины для продвинутого использования шаблонов.
+#### Шаблон заметки из Dendron
+
+Dendron использует метаданные при создании и обновлении заметки. Основные поля шаблона, которые добавляются в [свойства](https://help.obsidian.md/properties) заметки:
+```markdown
+---
+id: <internal Dendron ID>
+title: <Note title>
+desc: <Note description>
+updated: <update timestamp in seconds>
+created: <create timestamp in seconds>
+---
+```
+
+Плагин [[pim.obsidian#[Dendron Tree](https //github.com/levirs565/obsidian-dendron-tree)|Dendron Tree]] может генерировать данные свойства, которые называются *Front Matter*, если это разрешить в конфигурации:
+
+![[Pasted image 20250516130152.png|800]]
+
+Но, при разрешении этой опции не работает механизм подстановки шаблонов.
+#### [Templater plugin](https://github.com/SilentVoid13/Templater)
+
+* [Документация по Templater](https://silentvoid13.github.io/Templater/)
+* [15 Easy Templater Commands For Obsidian](https://www.redgregory.com/obsidian-content/2021/11/17/15-templater-commands-for-obsidian)
+
+##### Шаблон заметки из Dendron
+
+Dendron использует метаданные при создании и обновлении заметки. Можно реализовать аналогичный шаблон на Templater.
+Основные поля шаблона, которые добавляются в [свойства](https://help.obsidian.md/properties) заметки:
+```markdown
+---
+id: <internal Dendron ID>
+title: <Note title>
+desc: <Note description>
+updated: <update timestamp in seconds>
+created: <create timestamp in seconds>
+---
+```
+
+Сейчас заметил, что какой-то плагин генерирует все эти поля при создании новой заметки. ❓Интересно какой???
+
+Мне кажется полезным добавить следующие поля:
+* поле автора
+* дату создания/обновления в текстовом виде
+* заголовок заметки брать из поля title
+* курсивом помещать описание заметки
+
+Плагин предполагает настройку правил для применения шаблонов при создании документа. Правила срабатывают по регулярному выражению на имя заметки, побеждает [первое сработавшее правило](https://silentvoid13.github.io/Templater/settings.html#file-regex-templates)
+
+##### Генерация FrontMatter a-la Dendron
+
+Можно сгенерировать свойства документа так же как это делает Dendron.
+
+Генерация уникального id доступна через пользовательскую функцию, вот [тут](https://forum.obsidian.md/t/could-templater-plugin-create-unique-id-for-every-note/21616) описан пример.
+
+Мне кажется полезным добавить следующие поля:
+* поле автора
+* дату создания/обновления в текстовом виде
+* заголовок заметки брать из поля title
+* курсивом помещать описание заметки
+
 ### Вложения
 
  [Save images to a specific folder](https://forum.obsidian.md/t/save-images-to-a-specific-folder/27459):
@@ -220,6 +284,10 @@ git config set credential.helper libsecret
 ```
 
 Для работы с GitHub удобней использовать ключи SSH.
+
+### Шаблоны для ведения заметок
+
+#### [[pim.obsidian#[Templater plugin](https //github.com/SilentVoid13/Templater)|Templater]]
 
 ## Публичные волты
 
