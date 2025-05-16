@@ -186,7 +186,7 @@ mindmap-plugin: basic
 				- Deep Gaussian processes
 				- Deep Kernel machines
 				- Hierachical mixture models
-	- Classical Machine Learning ^689979da-f1a3-2b90
+	- Classical Machine Learning
 		- Regression
 			- Linear
 			- Polynomial
@@ -205,6 +205,23 @@ mindmap-plugin: basic
 			- t-SNE
 	- Learns from labeled data
 	- Hybrid Learning
+	- Embeddings
+		- Text
+			- Word2Vec, GloVe, FastText, BERT, GPT
+		- Image
+			- последний скрытый слой ResNet — это эмбеддинг.
+		- Audio
+			- wav2vec2, Whisper
+		- Graphs
+			- Node2Vec, DeepWalk, GraphSAGE
+		- Категориальные признаки (табличные данные)
+			- Пример (Keras):
+			void
+			void
+			Embedding(input_dim=num_unique_categories, output_dim=embedding_dim)
+		- Мультимодальные эмбеддинги
+			- Пример: модель CLIP (от OpenAI) получает эмбеддинги изображения и текста в одном пространстве, чтобы можно было сравнивать их напрямую.
+	- Tokenization
 - Other Approaches ^0d20b241-467d-1e05
 	- Symbolic AI ^695be396-67d0-256b
 		- Expert Systems
@@ -221,3 +238,12 @@ mindmap-plugin: basic
 	- Planning and Decision Making
 	- Robotics
 	- Cognitive Systems
+
+## Data preparation
+- Очистка
+	- удаление стоп-слов, пунктуации, приведение к нижнему регистру, токенизация.
+- Преобразование в числовой формат
+	- Bag of Words (BoW)
+	- TF-IDF
+	- Токенизация под трансформеры (например, BertTokenizer)
+- Padding и Truncation: приведение длины всех последовательностей к одной.
