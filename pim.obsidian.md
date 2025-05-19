@@ -240,7 +240,11 @@ You **need** to have Dataview installed to use this plugin.
 
 ##### [YouTube Video Summarizer for Obsidian](https://github.com/mbramani/obsidian-yt-video-summarizer)
 ##### [Obsidian Gemini-Generator](https://github.com/BjarneRentz/obsidian-gemini-generator)
+
+> Generate notes with the help of [Google Gemini](https://gemini.google.com/app?hl=de).
 ##### [Gemini Scribe for Obsidian](https://github.com/allenhutchison/obsidian-gemini)
+
+> Gemini Scribe is an Obsidian plugin that integrates Google's Gemini AI models, providing powerful AI-driven assistance for note-taking, writing, and knowledge management directly within Obsidian. It leverages your notes as context for AI interactions, making it a highly personalized and integrated experience.
 ##### [Gemini AI Assistant](https://github.com/Artel250/Obsidian-Gemini-Assistant)
 ##### [Your Gemini AI Powered Assistant](https://github.com/eatgrass/obsidian-gemini-assistant)
 
