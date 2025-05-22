@@ -12,6 +12,8 @@ tags:
   - markdown-integration
   - pim
   - dendron
+up:
+  - pim
 ---
 # Dendron
 
