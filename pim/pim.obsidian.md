@@ -4,6 +4,7 @@ tags:
   - note-taking
   - productivity
   - markdown
+  - pim
 related: "[[pim]]"
 title: Obsidian
 id: e339e5fd-78af-4064-b5c7-e241b4c29fa6

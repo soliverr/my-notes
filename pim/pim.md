@@ -1,17 +1,29 @@
-## Personal Insfomation Management
-
-* [Personal Information Management](https://en.wikipedia.org/wiki/Personal_information_management)
+---
+id: 401d7004-5697-43d9-a97a-709017f8af41
+title: pim
+desc: ""
+created: 1743690953
+updated: 1747905903
+author: Sergei Kryazvevskikh <soliverr@gmail.com>
+tags:
+  - knowledge-base
+  - note-organization
+  - personal-information
+  - pim
+  - note-taking
+---
+# [Personal Information Management](https://en.wikipedia.org/wiki/Personal_information_management)
 
 Список решений для создания собственных баз знаний и организации заметок:
 
 * Notion
 * QOwnNotes
 * Joplin
-* Dendron
+* [[pim.dendron|Dendron]]
 * Loqseq
 * [NotebookLM](https://notebooklm.google/)
 * OpenNotes AI
-* [Obsidian](pim.obsidian)
+* [Obsidian](pim.obsidian.md)
 
 
 ## Общие вопросы организации заметок

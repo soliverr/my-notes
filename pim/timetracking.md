@@ -4,6 +4,11 @@ title: Time Tracking Software
 desc: Measure individual productivity
 updated: 1678890515862
 created: 1630045566284
+tags:
+  - productivity
+  - personal-information
+  - time-tracking
+  - pim
 ---
 
 Задача мониторинга времени на ПК, Смартфоне становится актуальной с точки зрения повышения эффективности использования личного времени.
