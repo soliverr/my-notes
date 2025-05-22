@@ -248,12 +248,13 @@ You **need** to have Dataview installed to use this plugin.
 
 > Gemini Scribe is an Obsidian plugin that integrates Google's Gemini AI models, providing powerful AI-driven assistance for note-taking, writing, and knowledge management directly within Obsidian. It leverages your notes as context for AI interactions, making it a highly personalized and integrated experience.
 
+Pros:
+- историю чатов хранит красиво в папке **gemini-scribe**
+- можно редактировать заметки в истории чатов
+
 Cons:
 - странно работает, постоянно обновляет окно чата, теряет историю
 - чат открывается в отдельном окне, не как заметка
-
-Pros:
-- историю чатов хранит красиво в папке **gemini-scribe**
 
 ##### [Gemini AI Assistant](https://github.com/Artel250/Obsidian-Gemini-Assistant)
 
@@ -262,8 +263,7 @@ Pros:
 
 Cons:
 * Не даёт выбрать модель
-
-Показался более удобным в использовании.
+* Не даёт редактировать в Obsidian сохраняемые файлы заметок
 
 ##### [Your Gemini AI Powered Assistant](https://github.com/eatgrass/obsidian-gemini-assistant)
 
@@ -271,7 +271,7 @@ Cons:
 
 > 🚀 A seamless integration of ChatGPT, OpenRouter.ai and local LLMs via Ollama into Obsidian.
 
-Похоже, этот плагин позволяет вставлять интеграции с большинством LLM непосредственно в заметки, при чём, можно задавать различные параметры для взаимодействия с LLM.
+Этот плагин позволяет вставлять интеграции с большинством LLM непосредственно в заметки, при чём, можно задавать различные параметры для взаимодействия с LLM.
 
 #### Интеграция с Телеграмм
 
