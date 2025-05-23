@@ -26,11 +26,24 @@ tags:
 * [Obsidian](pim.obsidian.md)
 
 
-## Вопросы организации заметок
+## Методы организации заметок
 
-* https://medium.com/obsidian-observer/organising-your-notes-in-obsidian-a-complete-guide-bf939d7e47e8
-* https://mattgiaro.com/organize-notes-obsidian/
-* https://summarize.ing/video-15951-How-to-organize-your-notes-in-Obsidian-The-LATCH-method 
+* [Organising Your Notes in Obsidian — A Complete Guide](https://medium.com/obsidian-observer/organising-your-notes-in-obsidian-a-complete-guide-bf939d7e47e8)
+* [The Best Way I Found To Organize My 5,173 Obsidian Notes](https://mattgiaro.com/organize-notes-obsidian/)
+* [How to organize your notes in Obsidian // The LATCH method](https://summarize.ing/video-15951-How-to-organize-your-notes-in-Obsidian-The-LATCH-method)
+* 
+
+Мне известны следующие методы организации заметок:
+
+* интуитивный метод организации заметок с помощью папок (**Folders**) и тэгов (**Tags**)
+* метод **PARA** (**Projects–Areas–Resources–Archives**)
+* метод **Zettelkasten**
+* метод **LATCH** system (**Location, Alphabet, Time, Category, Hierarchy**)
+* метод **Dendron**
+
+### 📁 Folders and 🏷️ Tags
+
+Интуитивный метод создания иерархии каталогов и назначения заметкам тэгов. Смысл иерархии каталогов определяется конкретным человеком для себя, тэгам также назначается индивидуальный смысл, понятный автору заметок.
 
 ---
 Which methods are exist to organize notes in Obsidian?
