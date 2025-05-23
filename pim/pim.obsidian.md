@@ -22,6 +22,8 @@ author: Sergei Kryazvevskikh <soliverr@gmail.com>
 ### Примеры работы в Obsidian
 
 * [Writing in Obsidian: A Comprehensive Guide](https://medium.com/@dianademco/writing-in-obsidian-a-comprehensive-guide-58a1306ed293)
+* [Second brain](https://second-brain.ru)
+* [Цифровой сад Рустама Агамалиева](https://rustam-aka-rust.github.io/rustnotes/)
 
 ### Базовый синтаксис
 
