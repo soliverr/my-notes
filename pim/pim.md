@@ -2,8 +2,8 @@
 id: 401d7004-5697-43d9-a97a-709017f8af41
 title: pim
 desc: ""
-created: 1743690953
-updated: 1747905903
+created: "1743690953"
+updated: "1747905903"
 author: Sergei Kryazvevskikh <soliverr@gmail.com>
 tags:
   - knowledge-base
