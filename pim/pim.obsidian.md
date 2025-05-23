@@ -83,21 +83,31 @@ created: <create timestamp in seconds>
 
 ```markdown
 ---
-id: <% tp.user.uuid() %>
-title: <% tp.file.title.replaceAll('.', ' ') %>
+id: Error_MobileUnsupportedTemplate
+title: pim obsidian
 desc: ''
-created: <% tp.file.creation_date("X") %>
-updated: <% tp.file.last_modified_date("X") %>
+created: 1745676368
+updated: 1747925838
 author: Sergei Kryazvevskikh <soliverr@gmail.com>
-tags: <%tp.file.tags %> <% tp.file.title.replaceAll('.', ',') %>
+tags: #obsidian,#note-taking,#productivity,#markdown,#pim,#todo,#todo,#todo pim,obsidian
 ---
 ```
 
 **`dendron-frontmatter-template-create-page`** - можно назначить шаблоном по умолчанию при создании страницы:
 
 ```markdown
- <% tp.file.include("[[dendron-frontmatter-template]]") %>
- # <% tp.file.title.replaceAll('.', ' ') %>
+ ---
+id: Error_MobileUnsupportedTemplate
+title: pim obsidian
+desc: ''
+created: 1745676368
+updated: 1747925838
+author: Sergei Kryazvevskikh <soliverr@gmail.com>
+tags: #obsidian,#note-taking,#productivity,#markdown,#pim,#todo,#todo,#todo pim,obsidian
+---
+
+
+ # pim obsidian
 ```
 
 Я использую плоские наименования файлов Dendron, поэтому части имени файла можно сразу добавлять в теги.
