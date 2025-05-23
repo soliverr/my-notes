@@ -13,8 +13,8 @@ created: 1622461598773
 # Дистрибутивы
 
 * [k3s](https://k3s.io/)
-* [minikube](./kubernetes.minikube.md)
-* [microk8s](./kubernetes.microk8s.md)
+* [minikube](kubernetes.minikube.md)
+* [microk8s](kubernetes.microk8s.md)
 
 # Kubernetes concepts and usage
 

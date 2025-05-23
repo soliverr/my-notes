@@ -29,7 +29,7 @@ ai.classification ^jpmiPKJZ
 
 2 ^GgdGvOMs
 
-[[ai.classification.md]] ^K7kioWXU
+[[ai.classification]] ^K7kioWXU
 
 https://www.geeksforgeeks.org/approaches-to-ai-learning/ ^Gp1Ngwss
 

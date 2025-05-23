@@ -12,7 +12,7 @@ tags:
 
 # Системы управления конфигурацией
 
-* [Ansible](./devops.ansible.md)
+* [Ansible](devops.ansible.md)
 * Terraform
 * Puppet
 * Chef

@@ -69,7 +69,7 @@ https://docs.datadoghq.com/integrations/hive/?tabs=host:
 ```
 >    Then restart the HiveServer2 or the Hive Metastore. Hive Metastore and HiveServer2 cannot share the same JMX connection.
 
-Затем нужен агент для экспорта метрик в системы мониторинга, см. [BigData JMX](./bigdata.jmx.md)
+Затем нужен агент для экспорта метрик в системы мониторинга, см. [BigData JMX](bigdata.jmx.md)
 
 Вот, пример подключения агента для Prometheus https://stackoverflow.com/questions/63754168/hive-jmx-metrics-enable:
 

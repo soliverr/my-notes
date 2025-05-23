@@ -20,14 +20,14 @@ Stream Processing
 * [Apache Flink](http://flink.apache.org/)
 * [OharaStream](https://oharastream.github.io/en/)
 * [Lightbend Cloud](https://www.lightbend.com)
-* [Confluent](./streamprocessing.confluent.md)
-* [Lenses](./streamprocessing.lenses.md)
-* [Strimzi](./streamprocessing.strimzi.md)
+* [Confluent](streamprocessing.confluent.md)
+* [Lenses](streamprocessing.lenses.md)
+* [Strimzi](streamprocessing.strimzi.md)
 * [Siddhi](https://siddhi.io/)
 * Akka & Alpakka & Pykka
 * [Redpanda](https://redpanda.com/)
     * [CloudHut](https://cloudhut.dev/)
-* [Deephaven](./streamprocessing.deephaven.md)
+* [Deephaven](streamprocessing.deephaven.md)
 * [Materialize](https://materialize.com)
 
 ## Дополнительные материалы

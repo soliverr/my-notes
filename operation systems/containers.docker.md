@@ -59,4 +59,4 @@ https://www.mirantis.com/blog/multi-container-pods-and-container-communication-i
 
 ## Использование
 
-см. [Docker](./docker.md)
+см. [Docker](docker.md)

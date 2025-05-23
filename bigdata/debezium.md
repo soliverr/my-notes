@@ -22,7 +22,7 @@ created: 1630322116561
 
 ## Локальная устновка
 
-Добавить плагины Debezium в каталог Kafka Connect. Я устанавливаю [Kafka](./kafka.md) и Debezium с помощью [Ansible](./devops.ansible.md).
+Добавить плагины Debezium в каталог Kafka Connect. Я устанавливаю [Kafka](kafka.md) и Debezium с помощью [Ansible](devops.ansible.md).
 
 # Tutorial 
 

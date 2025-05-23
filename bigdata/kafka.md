@@ -185,7 +185,7 @@ Kafka in Kubernetes
 
 ## Lenses
 
-[Lenses](./streamprocessing.lenses.md)
+[Lenses](streamprocessing.lenses.md)
 
 ## Confluent
 

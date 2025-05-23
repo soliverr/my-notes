@@ -18,7 +18,7 @@ tags:
 
 * Notion
 * QOwnNotes
-* Joplin
+* [Joplin](https://joplinapp.org/)
 * [[pim.dendron|Dendron]]
 * Loqseq
 * [NotebookLM](https://notebooklm.google/)

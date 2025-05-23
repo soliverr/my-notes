@@ -338,7 +338,7 @@ tion": null}
 
 [Confluence Schema Management](https://docs.confluent.io/platform/current/schema-registry/index.html)
 
-[Kafka Schema](./Kafka.md#Confluent-Schema-Registry)
+[Kafka Schema](kafka.md#Confluent-Schema-Registry)
 
 Спросил в канале Slack:
 

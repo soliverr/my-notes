@@ -22,7 +22,7 @@ vendor
 
 # Streaming
 
-см. [Streaming Processing](./streamprocessing.md)
+см. [Streaming Processing](streamprocessing.md)
 
 # LakeHouse
 

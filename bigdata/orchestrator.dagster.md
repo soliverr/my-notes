@@ -18,7 +18,7 @@ created: 1625817823592
 
 > Note: Before you dive in, make sure you have Python 3.7+ installed.
 
-Мне кажется, лучше сконфигурировать [виртуальное окружение Python](./python.virtualenvironments.md) для локальных экспериментов с Dagster. 
+Мне кажется, лучше сконфигурировать [виртуальное окружение Python](python.virtualenvironments.md) для локальных экспериментов с Dagster. 
 
 ```sh
 pyenv virtualenv dagster

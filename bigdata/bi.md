@@ -8,4 +8,4 @@ created: 1657605505706
 
 * [Logi](https://insightsoftware.com/)
 * [Metabase][https://www.metabase.com]
-* [Apache Superset](./bi.superset.md)
+* [Apache Superset](bi.superset.md)
